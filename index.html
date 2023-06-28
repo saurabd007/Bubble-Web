@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moving Bubbles</title>
+  <style>
+    body {
+      
+      background-color: rgb(175, 236, 240,0.5);
+
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .how-you-feel {
+      text-align: center;
+      font-size: 30px;
+      color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      text-shadow: 0 0 10px #f4f1ba, 0 0 20px #f4f1ba, 0 0 30px #f4f1ba, 0 0 40px #f4f1ba, 0 0 50px #f4f1ba, 0 0 60px #f4f1ba, 0 0 70px #f4f1ba;    }
+      /* animation: moveBubbleLeftRight 4s linear infinite;
+      animation: moveBubbleUpDown 2s linear infinite; */
+    
+    
+    .bubble-left-right {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(to bottom, #d27dd3, #F76ABF, #DE6CE0, #D46AF7, #bb76fb);
+      /* background-color: #87CEEB; */
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: moveBubbleLeftRight 8s linear infinite;
+    }
+    
+    .bubble-up-down {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(to bottom, #ED667E, #F76ABF, #DE6CE0, #D46AF7, #AD66F0);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: moveBubbleUpDown 5s linear infinite;
+    }
+    
+    @keyframes moveBubbleLeftRight {
+      0% {
+        left: 0;
+      }
+      50% {
+        left: calc(100% - 50px);
+      }
+      51% {
+        left: calc(100% - 50px);
+      }
+      100% {
+        left: 0;
+      }
+    }
+    
+    @keyframes moveBubbleUpDown {
+      0% {
+        top: 0;
+      }
+      50% {
+        top: calc(100% - 50px);
+      }
+      100% {
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="how-you-feel">How You Feel</div>
+  <div class="bubble-left-right"></div>
+  <div class="bubble-up-down"></div>
+</body>
+</html>
